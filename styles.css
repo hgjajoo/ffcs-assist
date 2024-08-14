@@ -13,7 +13,7 @@ body {
 /* Styles for the grid container */
 .grid-container {
     display: grid;
-    grid-template-columns: 100px repeat(8, 100px); 
+    grid-template-columns: 125px repeat(8, 120px); 
     grid-template-rows: 50px repeat(6, 50px); 
     gap: 2px;
     background-color: #333;

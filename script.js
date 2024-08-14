@@ -7,7 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     "Friday",
     "Saturday",
   ];
-  const slots = ["08:30 - 10:00", "10:05 - 11:35" , "11:40 - 1:10", "1:15 - 2:45", "2:50 - 4:20", "4:25 - 5:55", "6:00 - 7:30"];
+  const slots = [
+    "08:30 - 10:00",
+    "10:05 - 11:35",
+    "11:40 - 01:10",
+    "01:15 - 02:45",
+    "02:50 - 04:20",
+    "04:25 - 05:55",
+    "06:00 - 07:30",
+  ];
 
   const data = [
     ["A11", "B11", "C11", "A21", "A14", "B21", "C21"], // Monday
@@ -16,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["D12", "E12", "F12", "D22", "F14", "E22", "F22"], // Thursday
     ["A13", "B13", "C13", "A23", "C14", "B23", "B24"], // Friday
     ["D13", "E13", "F13", "D23", "D14", "D24", "E23"], // Saturday
-  ];
+  ];
 
   const gridContainer = document.getElementById("grid-container");
   const colorOptionsContainer = document.getElementById("color-options");
@@ -28,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   slots.forEach((slot, index) => {
     const slotHeader = document.createElement("div");
     slotHeader.classList.add("grid-item", "header");
-    slotHeader.textContent = `Slot\n${slot}`;
+    slotHeader.innerHTML = `Slot<br>${slot}`;
     gridContainer.appendChild(slotHeader);
     if (index === 2) {
       const lunchHeader = document.createElement("div");
